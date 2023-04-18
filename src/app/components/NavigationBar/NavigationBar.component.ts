@@ -12,5 +12,11 @@ enum PlatformState {
 })
 
 export class NavigationBarComponent{
+    visible : boolean = false;
 
+    toggle()
+    {
+        this.visible = !this.visible;
+        console.log(this.visible);
+    }
 }
