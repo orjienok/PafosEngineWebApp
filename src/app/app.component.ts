@@ -1,9 +1,7 @@
 import { Platform } from '@angular/cdk/platform';
 import { Component } from '@angular/core';
 
-enum PlatformSpec {
-  mobile,desktop
-}
+enum PlatformSpec {desktop = "desktop",mobile = "mobile"};
 
 @Component({
   selector: 'app-root',
@@ -22,4 +20,9 @@ export class AppComponent {
   }
   title = 'my-app';
   appPlatformSpec! : PlatformSpec;
+
+  toConsole($event : any)
+  {
+      console.log($event);
+  }
 }

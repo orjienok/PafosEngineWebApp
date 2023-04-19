@@ -1,10 +1,5 @@
 import { Platform } from "@angular/cdk/platform";
-import { Component } from "@angular/core";
-
-enum PlatformState {
-    mobile,
-    desktop
-}
+import { Component, EventEmitter, Output } from "@angular/core";
 
 @Component({
     selector: 'app-NavigationBar',
@@ -14,9 +9,20 @@ enum PlatformState {
 export class NavigationBarComponent{
     visible : boolean = false;
 
+    @Output() open: EventEmitter<any> = new EventEmitter();
+    @Output() close: EventEmitter<any> = new EventEmitter();
+
     toggle()
     {
         this.visible = !this.visible;
-        console.log(this.visible);
+        if(this.visible)
+        {
+            this.open.emit('open');
+        } 
+        else 
+        {
+            this.close.emit('close');
+        }
     }
+
 }

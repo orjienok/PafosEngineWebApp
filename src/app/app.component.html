@@ -1,1 +1,2 @@
-<app-NavigationBar></app-NavigationBar>
+<app-NavigationBar (open)="toConsole($event)" (close)="toConsole($event)"></app-NavigationBar>
+<app-ContentContainer [platform]="appPlatformSpec"></app-ContentContainer>

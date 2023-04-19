@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavigationBarComponent } from './components/NavigationBar/NavigationBar.component';
 import {PlatformModule} from '@angular/cdk/platform'
+import { ContentContainerComponent } from './components/ContentContainer/ContentContainer.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavigationBarComponent
+    NavigationBarComponent,
+    ContentContainerComponent
   ],
   imports: [
     BrowserModule,
